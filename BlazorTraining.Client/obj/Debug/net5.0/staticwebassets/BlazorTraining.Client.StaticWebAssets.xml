@@ -1,0 +1,6 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Client\bin\Debug\net5.0\wwwroot\" />
+  <ContentRoot BasePath="/" Path="C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Client\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\kurtulusocL\.nuget\packages\radzen.blazor\2.2.5\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Tewr.Blazor.FileReader" Path="C:\Users\kurtulusocL\.nuget\packages\tewr.blazor.filereader\1.4.0.20072\build\..\staticwebassets\" />
+</StaticWebAssets>

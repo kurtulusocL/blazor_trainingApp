@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "HogV+wWh37vdNSvqSVW0dOedPp6IMCW/sJU5pbuU9NxUbM0gO3wltQn9bGa5qrZZT39wM+CRmVBTO7RAzrEQ8A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kurtulusocL\\Desktop\\BlazorTraining\\BlazorTraining.Server\\BlazorTraining.Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\aksoftware.webapi\\3.0.1\\aksoftware.webapi.3.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\blazored.localstorage\\2.1.1\\blazored.localstorage.2.1.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\5.0.1\\microsoft.aspnetcore.authorization.5.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.components\\5.0.1\\microsoft.aspnetcore.components.5.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\5.0.1\\microsoft.aspnetcore.components.analyzers.5.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\5.0.1\\microsoft.aspnetcore.components.authorization.5.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\3.0.0\\microsoft.aspnetcore.components.forms.3.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.components.web\\3.0.0\\microsoft.aspnetcore.components.web.3.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.aspnetcore.metadata\\5.0.1\\microsoft.aspnetcore.metadata.5.0.1.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.0\\microsoft.extensions.dependencyinjection.3.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\microsoft.jsinterop\\3.0.0\\microsoft.jsinterop.3.0.0.nupkg.sha512",
+    "C:\\Users\\kurtulusocL\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

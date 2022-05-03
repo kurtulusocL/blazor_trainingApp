@@ -1,0 +1,17 @@
+﻿@page "/"
+@layout AuthLayout
+
+@attribute [Authorize]
+@*<AuthorizeView>
+    <Authorized>
+        <h1>Welcome @context.User.FindFirst("FirstName").Value you got access</h1>
+    </Authorized>
+    <NotAuthorized>
+       <h2>Please Authorize</h2>
+    </NotAuthorized>
+</AuthorizeView>*@
+
+<h1>Blazor App!</h1>
+
+<RadzenButton Text="Hi"></RadzenButton>
+<SurveyPrompt Title="How is Blazor working for you?" />

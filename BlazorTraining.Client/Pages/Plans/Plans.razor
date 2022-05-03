@@ -1,0 +1,148 @@
+﻿@page "/plans"
+@page "/plans/{pageNumber:int}"
+@inject PlanService planService
+@inject NavigationManager navigationManager
+
+@attribute [Authorize]
+
+@if (string.IsNullOrWhiteSpace(Query))
+{
+    <h3>Plan List - Page: @PageNumber</h3>
+}
+else
+{
+    <h2>Plan List - Result for '@Query' - Page: @PageNumber</h2>
+}
+
+@if (isBusy)
+{
+    <h2>Loading</h2>
+}
+else
+{
+    <div class="row">
+        <RadzenTextBox Placeholder="Search Something" @bind-value="Query" /><RadzenButton Text="Search to Task" Click="async()=> await GetAllPlansAsync()" />
+    </div>
+    <hr />
+    <div class="row">
+        @foreach (var item in plans)
+        {
+            <div class="col-4">
+                <RadzenCard Style="margin:10px">
+                    <img src="@item.CoverPath" style="width:90px;margin:5px;" />
+                    <a href="/plans/details/@item.Id">@item.Title</a>
+                    <p>@item.Description</p>
+                    <hr />
+                    <div class="row">
+                        <div class="col-6">
+                            <RadzenButton ButtonStyle="Radzen.ButtonStyle.Success" Click='()=> navigationManager.NavigateTo($"/plans/details/{item.Id}")' Text="Edit" class="btn-block" />
+                        </div>
+                        <div class="col-6">
+                            <RadzenButton ButtonStyle="Radzen.ButtonStyle.Danger" Click="()=>SelectPlanById(item.Id)" Text="Delete" class="btn-block" />
+                        </div>
+                    </div>
+                    @if (selectedPlanId == item.Id)
+                    {
+                        <div class="row">
+                            <div class="col-12">
+                                <RadzenButton ButtonStyle="Radzen.ButtonStyle.Info" Click="async ()=> await DeletePlanAsync()" Text="Confirm" Style="margin:5px;" class="btn-block" />
+                            </div>
+                        </div>
+                    }
+
+                </RadzenCard>
+            </div>
+        }
+    </div>
+    <hr />
+    <div class="row">
+        @for (int i = 1; i <= totalPage; i++)
+        {
+            int page = i;
+            @if (page == PageNumber)
+            {
+                <RadzenButton ButtonStyle="Radzen.ButtonStyle.Info" Text="@i.ToString()" Click="async()=> await PageAsync(i)" Disabled="true" Style="margin:8px" />
+            }
+            else
+            {
+                <RadzenButton ButtonStyle="Radzen.ButtonStyle.Info" Text="@i.ToString()" Click="async()=> await PageAsync(i)" Style="margin:8px" />
+            }
+        }
+    </div>
+}
+
+
+@code {
+
+    [Parameter]
+    public int? PageNumber { get; set; }
+
+    [Parameter]
+    public string Query { get; set; }
+
+    [CascadingParameter]
+    private Task<AuthenticationState> authState { get; set; }
+
+    bool isBusy = false;
+    string selectedPlanId = string.Empty;
+    int totalPage = 1;
+
+    List<Plan> plans = new List<Plan>();
+
+    async Task GetAllPlansAsync()
+    {
+        isBusy = true;
+        var userState = authState.Result;
+        planService.AccessToken = userState.User.FindFirst("AccessToken").Value;
+
+        @if (PageNumber == null)
+            PageNumber = 1;
+
+        PlansCollectionPagingResponse result;
+        if (string.IsNullOrWhiteSpace(Query))
+            result = await planService.GetAllPlansByPageAsync(PageNumber.Value);
+        else
+            result = await planService.SearchPlansByPageAsync(Query, PageNumber.Value); ;
+
+
+        if (result.Count % result.PageSize == 0)
+            totalPage = result.Count / result.PageSize;
+        else
+            totalPage = (result.Count / result.PageSize) + 1;
+
+        plans = result.Records.ToList();
+        isBusy = false;
+    }
+
+    async Task PageAsync(int pageNumber)
+    {
+        PageNumber = pageNumber;
+        await GetAllPlansAsync();
+    }
+
+    void SelectPlanById(string id)
+    {
+        selectedPlanId = id;
+    }
+
+    async Task DeletePlanAsync()
+    {
+        isBusy = true;
+        var result = await planService.DeletePlanAsync(selectedPlanId);
+        if (result.IsSuccess)
+        {
+            var deletePlan = plans.SingleOrDefault(i => i.Id == selectedPlanId);
+            plans.Remove(deletePlan);
+        }
+        else
+        {
+            await GetAllPlansAsync();
+        }
+        isBusy = false;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetAllPlansAsync();
+    }
+}

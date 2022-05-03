@@ -1,0 +1,12 @@
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\bin\Debug\net5.0\BlazorTraining.Server.deps.json
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\bin\Debug\net5.0\BlazorTraining.Server.dll
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\bin\Debug\net5.0\ref\BlazorTraining.Server.dll
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\bin\Debug\net5.0\BlazorTraining.Server.pdb
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.csproj.AssemblyReference.cache
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.AssemblyInfoInputs.cache
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.AssemblyInfo.cs
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.csproj.CoreCompileInputs.cache
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.dll
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\ref\BlazorTraining.Server.dll
+C:\Users\kurtulusocL\Desktop\BlazorTraining\BlazorTraining.Server\obj\Debug\net5.0\BlazorTraining.Server.pdb
